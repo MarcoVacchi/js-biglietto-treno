@@ -21,8 +21,22 @@ prima di tutto, nel file README, indicate tutti i passaggi utili allo svolgiment
 */
 
 
+// Le mie variabili
 const kmToRoad = prompt ('inserisci il numero di km da percorrere');
 const age = prompt ('inserisci la tua età');
 const priceForKm = 0.21;
 const totalPrice = kmToRoad * priceForKm;
-console.log(totalPrice);
+
+// Verifica se kmToRoad non è un numero
+if (isNaN(kmToRoad) || kmToRoad === '') {
+    alert('Please, insert a valid number, for the km not a word!');
+} else {
+    console.log(parseInt(totalPrice));
+}
+
+// Verifica se age non è un numero
+if (isNaN(age) || age === '') {
+    alert("Please, insert a valid number for declare your age!");
+} else {
+    console.log(parseInt(age));
+}
