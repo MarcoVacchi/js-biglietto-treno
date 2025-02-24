@@ -22,21 +22,29 @@ prima di tutto, nel file README, indicate tutti i passaggi utili allo svolgiment
 
 
 // Le mie variabili
-const kmToRoad = prompt ('inserisci il numero di km da percorrere');
-const age = prompt ('inserisci la tua età');
+let kmToRoad = prompt ('Insert the km to road');
+let age = prompt ('insert your age');
 const priceForKm = 0.21;
-const totalPrice = kmToRoad * priceForKm;
+let totalPrice = kmToRoad * priceForKm;
 
-// Verifica se kmToRoad non è un numero
+// Verifica se kmToRoad non sia un numero
+
 if (isNaN(kmToRoad) || kmToRoad === '') {
-    alert('Please, insert a valid number, for the km not a word!');
-} else {
-    console.log(parseInt(totalPrice));
-}
+    alert('Please, insert a valid number for the km, not a word!');
+} 
 
-// Verifica se age non è un numero
+    // Verifica se age non è un numero
 if (isNaN(age) || age === '') {
-    alert("Please, insert a valid number for declare your age!");
-} else {
-    console.log(parseInt(age));
-}
+    alert("Please, insert a valid number for your age!");
+    } else {
+        // Controlla l'età e applica lo sconto
+        if (age <= 18) {
+            totalPrice = totalPrice - (totalPrice * 20) / 100; // applico lo sconto del 20% per -18
+        } else if (age >= 65) {
+            totalPrice = totalPrice - (totalPrice * 40) / 100; // applico lo sconto del 40% per gli over 65
+        }
+        // applico il prezzo finale in forma umana con massimo 2 decimali (per indicare i centesimi)
+        console.log("Great! The price is: €" + totalPrice.toFixed(2));
+    }
+
+
