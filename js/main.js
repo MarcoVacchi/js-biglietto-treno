@@ -11,6 +11,7 @@ prima di tutto, nel file README, indicate tutti i passaggi utili allo svolgiment
 
 - chiedo all'utente il numero di chilometri che vuole percorrere;
 - chiedo all'utente la sua età;
+- valuto che l'utente inserisca un numero in entrambi i campi
 - calcolo il prezzo totale del viaggio sulla base di queste regole;
 - il prezzo del biglietto è di (0.21$ al km);
 - SE l'utente ha -18 anni;
