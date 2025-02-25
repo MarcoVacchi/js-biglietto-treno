@@ -23,8 +23,8 @@ prima di tutto, nel file README, indicate tutti i passaggi utili allo svolgiment
 
 
 // Le mie variabili
-let kmToRoad = prompt ('Insert the km to road');
-let age = prompt ('insert your age');
+let kmToRoad = parseFloat(prompt ('Insert the km to road'));
+let age = parseFloat(prompt ('insert your age'));
 const priceForKm = 0.21;
 let totalPrice = kmToRoad * priceForKm;
 
