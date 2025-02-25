@@ -30,13 +30,13 @@ let totalPrice = kmToRoad * priceForKm;
 
 // Verifica se kmToRoad non sia un numero
 
-if (isNaN(kmToRoad) || kmToRoad === '') {
-    alert('Please, insert a valid number for the km, not a word!');
+if (isNaN(kmToRoad) || kmToRoad === '' || kmToRoad <= 0 ) {
+    alert( 'Please, insert a valid number for the km, not a word, negative number or a space!' );
 } 
 
     // Verifica se age non è un numero
-if (isNaN(age) || age === '') {
-    alert("Please, insert a valid number for your age!");
+if (isNaN(age) || age === '' || age <= 0 ) {
+    alert( 'Please, insert a valid number for the age, not a word, negative number or a space!' );
     } else {
         // Controlla l'età e applica lo sconto
         if (age <= 18) {
